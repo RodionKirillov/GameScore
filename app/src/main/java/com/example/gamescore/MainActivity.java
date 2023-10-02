@@ -76,6 +76,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MainScore", "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MainScore", "onPause");
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         Log.d("MainScore", "onStop");
@@ -87,5 +99,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainScore", "onDestroy");
     }
 
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
 }
